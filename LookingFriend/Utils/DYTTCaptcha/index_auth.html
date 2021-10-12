@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>图形验证码</title>
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+    </head>
+    <body>
+        <script>
+            var callBack = (res)=>{
+                if(res.ret === 0){
+                  console.log("验证成功" + res);
+                }
+                window.webkit.messageHandlers.afterAuthResponse.postMessage(res);
+            };
+    
+            function showBack(res){
+                console.log("验证码高"+ res.sdkView.width + "宽" + res.sdkView.height);
+                window.webkit.messageHandlers.afterShowBack.postMessage(res);
+            }
+        
+            var options = {
+                "ready":showBack,
+                "sdkOpts":{"width": 100, "height": 100},
+                "needFeedBack":{ needFeedBack: false }
+            };
+        
+            var captcha1 = new TencentCaptcha('2099788396', callBack, options);
+            captcha1.show();
+        </script>
+    </body>
+</html>

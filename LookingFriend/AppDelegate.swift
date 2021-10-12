@@ -7,30 +7,100 @@
 
 import UIKit
 
-@main
+
+let KApp: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    static let shared: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let tab = DCMainTabController()
+        window?.rootViewController = tab
+        window?.makeKeyAndVisible()
+
+//        configHost()
+//        configKeyBoard()
+//        configIM()
+//        configNotificaiton()
+//        checkAppUpdate()
+//        configAutoLogin()
+        
         return true
     }
+}
 
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+extension AppDelegate {
+    /// 配置网络
+    fileprivate func configHost() {
+//        RequestTool.configGlobalHost(NetConstant.host, { (_) -> Dictionary<String, String> in
+//            [
+//                "deviceType": "IOS",
+//                "version": APPConfig.sharedInstance().dyt_ProductVersion,
+//                "userId": DCDataManager.shared.user?.docId ?? "",
+//                "sessionId": DCDataManager.shared.sessionId ?? "",
+//            ]
+//        }, { tool in
+//            if APPConfig.sharedInstance().isSecretAPI,
+//                tool.encodeType != .form,
+//                tool.getFullURL().contains(NetConstant.host) == true {
+//                let paramStr = tool.formatQueryParams()
+//                if paramStr.count > 0 {
+//                    tool.queryParams = DES3Util.encryptHex(paramStr)
+//                }
+//
+//                if let bodyStr = String(data: tool.body as? Data ?? Data(), encoding: .utf8), bodyStr.count > 0 {
+//                    tool.body = DES3Util.encryptHex(bodyStr)
+//                }
+//            }
+//
+//        }, DYTHTTPResponseSerializer())
     }
 
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    /// 配置键盘`
+    fileprivate func configKeyBoard() {
+//        IQKeyboardManager.shared().isEnabled = true
+//
+//        func disables(vc: UIViewController.Type) {
+//            IQKeyboardManager.shared().disabledToolbarClasses.add(vc)
+//            IQKeyboardManager.shared().disabledDistanceHandlingClasses.add(vc)
+//            IQKeyboardManager.shared().disabledTouchResignedClasses.add(vc)
+//        }
+//
+//        disables(vc: BaseChatViewController.self)
+//        disables(vc: BaseGroupChatController.self)
+//        disables(vc: DCPersonCenterController.self)
     }
-
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+    }
+
+    // iOS10 App位于后台, 点击推送消息时处理推送消息
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        completionHandler()
+    }
+    
+    /// 获取到deviceToken
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    }
+    
+    /// 失败回调
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print(error);
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        application.applicationIconBadgeNumber = 0;
+    }
+}
