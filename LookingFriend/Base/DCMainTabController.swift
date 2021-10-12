@@ -3,27 +3,30 @@
 // Copyright (c) 2020 导医通. All rights reserved.
 //
 
+import UIKit
+
 class DCMainTabController: UITabBarController {
 
     private var controllers: [UIViewController] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-        delegate = self
-        tabBar.isTranslucent = false
-        tabBar.tintColor = UIColor.dyt_bold_title
-        tabBar.barTintColor = .red
-        addTabBarShadow()
-
+        setup()        
+        let v = UIView(frame: CGRect(x: 0, y: 0, width: KScreen_Width, height: 0.5))
+        v.backgroundColor = UIColor(hex: 0xEEEEF2)
+        tabBar.addSubview(v)
+        
+        print(tabBar.subviews)
     }
 
     private func setup() {
-            
-        addItems(vc: ViewController(), title: "首页", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
-        addItems(vc: ViewController(), title: "健康管理", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
-        addItems(vc: ViewController(), title: "我的", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
+
+        addItems(vc: HomeViewController(), title: "", image: UIImage(named: "home_nomal"), selectedImage: UIImage(named: "home_sel"))
+        addItems(vc: DynamicViewController(), title: "", image: UIImage(named: "dynamic_nomal"), selectedImage: UIImage(named: "dynamic_sel"))
+        addItems(vc: MessageViewController(), title: "", image: UIImage(named: "message_nomal"), selectedImage: UIImage(named: "message_sel"))
+        addItems(vc: MineViewController(), title: "", image: UIImage(named: "mine_nomal"), selectedImage: UIImage(named: "mine_sel"))
         setViewControllers(controllers, animated: true)
+
     }
 
     private func addItems(vc: UIViewController, title: String?, image: UIImage?, selectedImage: UIImage?) {
@@ -43,11 +46,9 @@ class DCMainTabController: UITabBarController {
         tabBar.shadowImage =  UIImage()
         // 添加阴影
         tabBar.layer.shadowColor = UIColor.lightGray.cgColor
-        tabBar.layer.shadowOffset = CGSize(width: 0, height: -2)
-        tabBar.layer.shadowOpacity = 0.3
-        
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: -1)
+        tabBar.layer.shadowOpacity = 0.8
     }
-
 }
 
 extension DCMainTabController: UITabBarControllerDelegate {

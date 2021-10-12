@@ -8,5 +8,7 @@
 #ifndef ControllerHeader_h
 #define ControllerHeader_h
 
+#import "BaseTableViewController.h"
+
 
 #endif /* ControllerHeader_h */

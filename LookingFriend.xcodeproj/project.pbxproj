@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2CDE3DA4C6F6604AA623D0B1 /* Pods_LookingFriend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCFCD623C7EE1493DA73D6A1 /* Pods_LookingFriend.framework */; };
+		F037D97827157D6D00423B61 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037D97727157D6D00423B61 /* HomeViewController.swift */; };
+		F037D97A27157DE000423B61 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037D97927157DE000423B61 /* MessageViewController.swift */; };
+		F037D97C27157E3900423B61 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037D97B27157E3900423B61 /* MineViewController.swift */; };
+		F037D97E27157E6300423B61 /* DynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037D97D27157E6300423B61 /* DynamicViewController.swift */; };
 		F043300726F1D9C6000FDFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043300626F1D9C6000FDFF9 /* AppDelegate.swift */; };
 		F043300B26F1D9C6000FDFF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043300A26F1D9C6000FDFF9 /* ViewController.swift */; };
 		F043300E26F1D9C6000FDFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F043300C26F1D9C6000FDFF9 /* Main.storyboard */; };
@@ -132,6 +136,10 @@
 		36A2A8DBF3EC0D11442F89BE /* Pods-LookingFriend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookingFriend.release.xcconfig"; path = "Target Support Files/Pods-LookingFriend/Pods-LookingFriend.release.xcconfig"; sourceTree = "<group>"; };
 		ACB8F82C7ADCC99C4799D715 /* Pods-LookingFriend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookingFriend.debug.xcconfig"; path = "Target Support Files/Pods-LookingFriend/Pods-LookingFriend.debug.xcconfig"; sourceTree = "<group>"; };
 		BCFCD623C7EE1493DA73D6A1 /* Pods_LookingFriend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LookingFriend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F037D97727157D6D00423B61 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F037D97927157DE000423B61 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		F037D97B27157E3900423B61 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		F037D97D27157E6300423B61 /* DynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicViewController.swift; sourceTree = "<group>"; };
 		F043300326F1D9C6000FDFF9 /* LookingFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookingFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F043300626F1D9C6000FDFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F043300A26F1D9C6000FDFF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -344,6 +352,38 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F037D97327157D1C00423B61 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				F037D97727157D6D00423B61 /* HomeViewController.swift */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		F037D97427157D3600423B61 /* 留言板 */ = {
+			isa = PBXGroup;
+			children = (
+				F037D97D27157E6300423B61 /* DynamicViewController.swift */,
+			);
+			path = "留言板";
+			sourceTree = "<group>";
+		};
+		F037D97527157D4100423B61 /* 消息 */ = {
+			isa = PBXGroup;
+			children = (
+				F037D97927157DE000423B61 /* MessageViewController.swift */,
+			);
+			path = "消息";
+			sourceTree = "<group>";
+		};
+		F037D97627157D4800423B61 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				F037D97B27157E3900423B61 /* MineViewController.swift */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
 		F0432FFA26F1D9C6000FDFF9 = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +519,10 @@
 		F043305A26F1E4E8000FDFF9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F037D97327157D1C00423B61 /* 首页 */,
+				F037D97427157D3600423B61 /* 留言板 */,
+				F037D97527157D4100423B61 /* 消息 */,
+				F037D97627157D4800423B61 /* 我的 */,
 				F043305B26F1E4E8000FDFF9 /* ControllerHeader.h */,
 			);
 			path = Controller;
@@ -980,6 +1024,7 @@
 			files = (
 				F043309626F1E4E8000FDFF9 /* DYTHTTPResponseSerializer.m in Sources */,
 				F04330AF26F1E4E8000FDFF9 /* UITextView+Category.m in Sources */,
+				F037D97827157D6D00423B61 /* HomeViewController.swift in Sources */,
 				F043313126F1E51A000FDFF9 /* DES3Util.m in Sources */,
 				F043313426F1E51A000FDFF9 /* UIButton+ImageTitleSpacing.m in Sources */,
 				F043313026F1E51A000FDFF9 /* GTMBase64.m in Sources */,
@@ -1011,6 +1056,7 @@
 				F043313626F1E51A000FDFF9 /* SDPhotoBrowser.m in Sources */,
 				F043315026F1E51A000FDFF9 /* zhPopupController.m in Sources */,
 				F043313926F1E51A000FDFF9 /* CustomMoveView.m in Sources */,
+				F037D97C27157E3900423B61 /* MineViewController.swift in Sources */,
 				F043309B26F1E4E8000FDFF9 /* DCControllerExtension.swift in Sources */,
 				F043313726F1E51A000FDFF9 /* SDWaitingView.m in Sources */,
 				F043313D26F1E51A000FDFF9 /* DYTAlertViewTools.m in Sources */,
@@ -1066,9 +1112,11 @@
 				F043308F26F1E4E8000FDFF9 /* DCBaseFormController.swift in Sources */,
 				F043315D26F1E8AF000FDFF9 /* DCDataManager.swift in Sources */,
 				F043315326F1E51A000FDFF9 /* DYTFileManager.m in Sources */,
+				F037D97E27157E6300423B61 /* DynamicViewController.swift in Sources */,
 				F043313826F1E51A000FDFF9 /* SDBrowserImageView.m in Sources */,
 				F043314626F1E51A000FDFF9 /* UIView+Layout.m in Sources */,
 				F04330AC26F1E4E8000FDFF9 /* UIView+EmptyView.m in Sources */,
+				F037D97A27157DE000423B61 /* MessageViewController.swift in Sources */,
 				F04330B326F1E4E8000FDFF9 /* UIColor+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
