@@ -30,7 +30,7 @@ extension UIColor {
     /// 新背景
     @objc static let dyt_new_background = UIColor(hexString: "f4f5f6")
 
-    @objc static let dyt_title = UIColor(hexString: "222222")
+    @objc static let dyt_title = UIColor(hexString: "0D0E15")
     /// 正文 494847
     @objc static let dyt_text = UIColor(hexString: "494847")
     /// 描述 83817F
