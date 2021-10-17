@@ -38,7 +38,7 @@
             if (hostString.length) {
                 self.hostString = hostString;
             }
-            
+        
             NSString *isSecretSwitch = [[DCDataManager shared].fileManager getJsonWithFileName:@"isSecretAPI"];
             if (isSecretSwitch.length) {
                 self.isSecretAPI = [isSecretSwitch isEqualToString:@"0"] ? NO : YES;

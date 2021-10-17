@@ -2,6 +2,9 @@
 // Created by chenjg on 2020/1/3.
 // Copyright (c) 2020 导医通. All rights reserved.
 //
+import UIKit
+import Foundation
+
 
 typealias CommonBlock = (_ param: Any?) -> Void
 
@@ -27,8 +30,9 @@ let KScreen_Height = KScreen_Size.height
 let xTopMargin: CGFloat = isX ? 24 : 0
 let xBottomMargin: CGFloat = isX ? 34 : 0
 let KNav_Height = 64 + xTopMargin
-let KTab_Height = 44 + xBottomMargin
+let KTab_Height = 49 + xBottomMargin
 let APPHost: String = APPConfig.sharedInstance().host.hosturl
+
 
 func DLog(_ messages: Any..., file: String = #file, funcName: String = #function, lineNum: Int = #line) {
     #if DEBUG
@@ -50,6 +54,18 @@ func getURL(_ urlStr: Any?) -> URL? {
     }
     return nil
 }
+
+func gScale(_ number: CGFloat?) -> CGFloat {
+    let n: CGFloat = number ?? 0
+    return floor(KScreen_Width / 375.0 * n)
+}
+
+func gImage(_ imageStr: String?) -> UIImage {
+    guard let imageS = imageStr else { return UIImage() }
+    guard let image = UIImage(named: imageS) else { return UIImage() }
+    return image
+}
+
 
 func scrollFixForIOS11(scrollView: UIScrollView?) {
     if #available(iOS 11.0, *) {

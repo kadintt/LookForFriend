@@ -9,6 +9,7 @@
 #import "LookingFriend-Swift.h"
 #import "NSString+Category.h"
 #import "DYTHUDTool.h"
+#import "APPDefine.h"
 
 @implementation BaseModel
 
@@ -23,7 +24,6 @@ MJCodingImplementation
     if ([model isKindOfClass:[self class]]) {
         return ((BaseModel *)model).handle;
     }
-//    [UIApplication.sharedApplication.keyWindow makeToast:@"服务器出小差了"];
     [DYTHUDTool showWDToast:@"服务器出小差了"];
     return false;
 }
@@ -89,15 +89,12 @@ MJCodingImplementation
         if (IsEmptyString(self.otherMessage)) {
             if (!IsEmptyString(self.message)) {
                 if (self.message.length > 40) {
-//                    [UIApplication.sharedApplication.keyWindow makeToast:@"服务器出小差了"];
                      [DYTHUDTool showWDToast:@"服务器出小差了"];
                 } else {
-//                    [UIApplication.sharedApplication.keyWindow makeToast:self.message];
                     [DYTHUDTool showWDToast:self.message];
                 }
             }
         } else {
-//            [UIApplication.sharedApplication.keyWindow makeToast:self.otherMessage];
             [DYTHUDTool showWDToast:self.otherMessage];
         }
     }

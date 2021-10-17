@@ -36,7 +36,7 @@ extension UIColor {
     /// 描述 83817F
     @objc static let dyt_description = UIColor(hexString: "83817F")
     /// placeholder E1E0DF
-    @objc static let dyt_placeholder = UIColor(hexString: "E1E0DF")
+    @objc static let dyt_placeholder = UIColor(hexString: "#EEEFF2")
     /// 价格#FF632B
     @objc static let dyt_price = UIColor(hexString: "FF632B")
 

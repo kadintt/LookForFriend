@@ -113,6 +113,10 @@
 		F043315726F1E51A000FDFF9 /* PasswordKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = F043312426F1E51A000FDFF9 /* PasswordKeyboard.xib */; };
 		F043315826F1E51A000FDFF9 /* YCShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = F043312626F1E51A000FDFF9 /* YCShadowView.m */; };
 		F043315D26F1E8AF000FDFF9 /* DCDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043315C26F1E8AF000FDFF9 /* DCDataManager.swift */; };
+		F0434B5227186E880070B3AF /* RecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0434B5127186E880070B3AF /* RecommendController.swift */; };
+		F0434B5427186EED0070B3AF /* NearPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0434B5327186EED0070B3AF /* NearPeopleViewController.swift */; };
+		F0434B7A271BB0800070B3AF /* RecommendPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0434B79271BB0800070B3AF /* RecommendPeopleCell.swift */; };
+		F0805671271C2AFE00503BF5 /* NearPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0805670271C2AFE00503BF5 /* NearPeopleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -315,6 +319,11 @@
 		F043312626F1E51A000FDFF9 /* YCShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCShadowView.m; sourceTree = "<group>"; };
 		F043312726F1E51A000FDFF9 /* YCShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCShadowView.h; sourceTree = "<group>"; };
 		F043315C26F1E8AF000FDFF9 /* DCDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCDataManager.swift; sourceTree = "<group>"; };
+		F0434B5127186E880070B3AF /* RecommendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendController.swift; sourceTree = "<group>"; };
+		F0434B5327186EED0070B3AF /* NearPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearPeopleViewController.swift; sourceTree = "<group>"; };
+		F0434B79271BB0800070B3AF /* RecommendPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPeopleCell.swift; sourceTree = "<group>"; };
+		F0805670271C2AFE00503BF5 /* NearPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearPeopleCell.swift; sourceTree = "<group>"; };
+		F0805672271C431000503BF5 /* APPDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPDefine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,7 +364,10 @@
 		F037D97327157D1C00423B61 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				F0434B78271BB04C0070B3AF /* view */,
 				F037D97727157D6D00423B61 /* HomeViewController.swift */,
+				F0434B5127186E880070B3AF /* RecommendController.swift */,
+				F0434B5327186EED0070B3AF /* NearPeopleViewController.swift */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -453,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				F043303C26F1E4E7000FDFF9 /* ModelsHeader.h */,
+				F0805672271C431000503BF5 /* APPDefine.h */,
 				F043303D26F1E4E7000FDFF9 /* Base */,
 			);
 			path = Models;
@@ -835,6 +848,15 @@
 			path = YCShadowView;
 			sourceTree = "<group>";
 		};
+		F0434B78271BB04C0070B3AF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F0434B79271BB0800070B3AF /* RecommendPeopleCell.swift */,
+				F0805670271C2AFE00503BF5 /* NearPeopleCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		F7922C1F3751978127F85400 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1052,9 +1074,11 @@
 				F043314A26F1E51A000FDFF9 /* TZImageManager.m in Sources */,
 				F043309926F1E4E8000FDFF9 /* NetApi.swift in Sources */,
 				F04330A726F1E4E8000FDFF9 /* XLFormRowDescriptorExtention.swift in Sources */,
+				F0434B7A271BB0800070B3AF /* RecommendPeopleCell.swift in Sources */,
 				F043315626F1E51A000FDFF9 /* PasswordKeyboard.m in Sources */,
 				F043313626F1E51A000FDFF9 /* SDPhotoBrowser.m in Sources */,
 				F043315026F1E51A000FDFF9 /* zhPopupController.m in Sources */,
+				F0805671271C2AFE00503BF5 /* NearPeopleCell.swift in Sources */,
 				F043313926F1E51A000FDFF9 /* CustomMoveView.m in Sources */,
 				F037D97C27157E3900423B61 /* MineViewController.swift in Sources */,
 				F043309B26F1E4E8000FDFF9 /* DCControllerExtension.swift in Sources */,
@@ -1065,6 +1089,7 @@
 				F043314326F1E51A000FDFF9 /* TZVideoPlayerController.m in Sources */,
 				F043315826F1E51A000FDFF9 /* YCShadowView.m in Sources */,
 				F043300726F1D9C6000FDFF9 /* AppDelegate.swift in Sources */,
+				F0434B5227186E880070B3AF /* RecommendController.swift in Sources */,
 				F04330A426F1E4E8000FDFF9 /* SwizzleProtocol.swift in Sources */,
 				F043309026F1E4E8000FDFF9 /* DCViewController.m in Sources */,
 				F043314726F1E51A000FDFF9 /* TZPhotoPreviewController.m in Sources */,
@@ -1118,6 +1143,7 @@
 				F04330AC26F1E4E8000FDFF9 /* UIView+EmptyView.m in Sources */,
 				F037D97A27157DE000423B61 /* MessageViewController.swift in Sources */,
 				F04330B326F1E4E8000FDFF9 /* UIColor+Category.m in Sources */,
+				F0434B5427186EED0070B3AF /* NearPeopleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
