@@ -9,7 +9,6 @@ target 'LookingFriend' do
   inhibit_all_warnings!
 
   # Pods for LookingFriend
-
   pod 'MJRefresh'
   pod 'SDWebImage', '~> 4.4.2'
   pod 'MBProgressHUD'
@@ -24,8 +23,6 @@ target 'LookingFriend' do
   pod 'XLForm'
   pod 'WebViewJavascriptBridge'
   pod 'Masonry'
-  pod 'FMDB'
   pod 'lottie-ios', '~> 2.5.3'
-  pod 'NVActivityIndicatorView'
    
 end

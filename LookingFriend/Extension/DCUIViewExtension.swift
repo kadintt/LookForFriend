@@ -97,21 +97,6 @@ extension UIView {
     
 }
 
-//extension UIView {
-//    @objc func jq_navController() -> UINavigationController? {
-//        var nextResp: UIResponder? = next
-//
-//        repeat {
-//            if let navController = nextResp as? UINavigationController, ((nextResp as? RTRootNavigationController) != nil) {
-//                return navController
-//            }
-//            nextResp = nextResp?.next
-//        } while next != nil
-//
-//        return nil
-//    }
-//}
-
 // MARK: - Bundle加载XIB
 
 extension UIView {

@@ -33,7 +33,7 @@ class DCNavigationBar: UINavigationBar {
         set {
             super.backgroundColor = .clear
             color = newValue ?? .white
-            contentView.image = UIImage(color: color, size: CGSize(width: KScreen_Width, height: KNav_Height))
+            contentView.image = UIImage(color: color, size: CGSize(width: KScreen_Width, height: XNavHeight()))
             sendSubviewToBack(contentView)
         }
     }
@@ -44,7 +44,7 @@ class DCNavigationBar: UINavigationBar {
         setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         shadowImage = UIImage()
         insertSubview(contentView, at: 0)
-        contentView.sd.leftEqual(self).rightEqual(self).bottomEqual(self).heightIs(KNav_Height)
+        contentView.sd.leftEqual(self).rightEqual(self).bottomEqual(self).heightIs(XNavHeight())
         sd_addSubviews([shadowImageView])
         shadowImageView.sd.leftEqual(self).rightEqual(self).heightIs(1).bottomEqual(self)
     }

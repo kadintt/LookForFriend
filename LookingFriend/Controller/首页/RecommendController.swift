@@ -12,7 +12,6 @@ private let reuseIdentifier = "Cell"
 class RecommendController: DCViewController {
 
     lazy var collectionView:UICollectionView = {
-        
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: (KScreen_Width - gScale(35))/2, height: gScale(250))
         layout.minimumLineSpacing = gScale(7)

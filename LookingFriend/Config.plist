@@ -5,7 +5,7 @@
 	<key>hostString</key>
 	<string>UAT</string>
 	<key>DYT_ProductVersion</key>
-	<string>91</string>
+	<string>1</string>
 	<key>debugMode</key>
 	<false/>
 	<key>isSecretAPI</key>

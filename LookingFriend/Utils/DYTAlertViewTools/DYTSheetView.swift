@@ -133,7 +133,7 @@ extension DYTSheetView {
 
         cancleBtn.sd.leftEqual(contentView).rightEqual(contentView).heightIs(50).topSpace(tableView, 10)
         topRightCancleBtn.sd.rightSpace(contentView, 20).topSpace(contentView, 20).widthIs(20).heightIs(20)
-        contentView.setupAutoHeight(withBottomView: cancleBtn, bottomMargin: xBottomMargin)
+        contentView.setupAutoHeight(withBottomView: cancleBtn, bottomMargin: XBottomMargin())
     }
 
     /// 初始化界面

@@ -41,7 +41,7 @@ import UIKit
         v.contentMode = .scaleAspectFit
         v.loopAnimation = true
         v.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        v.center = CGPoint(x: self.center.x, y: self.center.y - KNav_Height)
+        v.center = CGPoint(x: self.center.x, y: self.center.y - XNavHeight())
         addSubview(v)
         return v
     }()

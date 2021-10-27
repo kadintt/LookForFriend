@@ -14,23 +14,11 @@ var KWindow: UIWindow? {
     UIApplication.shared.keyWindow
 }
 
-var isX: Bool = {
-    var x = false
-    if #available(iOS 11.0, *), UIDevice.current.userInterfaceIdiom == .phone, KWindow?.safeAreaInsets.bottom ?? 0 > CGFloat(0.0) {
-        x = true
-    }
-    return x
-}()
-
 let KScreen_Bounds = UIScreen.main.bounds
 let KScreen_Size = KScreen_Bounds.size
 let KScreen_Width = KScreen_Size.width
 let KScreen_Height = KScreen_Size.height
 
-let xTopMargin: CGFloat = isX ? 24 : 0
-let xBottomMargin: CGFloat = isX ? 34 : 0
-let KNav_Height = 64 + xTopMargin
-let KTab_Height = 49 + xBottomMargin
 let APPHost: String = APPConfig.sharedInstance().host.hosturl
 
 
@@ -73,6 +61,23 @@ func scrollFixForIOS11(scrollView: UIScrollView?) {
     }
 }
 
+func XNavHeight() -> CGFloat{
+    return UIDevice.current.isiPhoneXMore() ? 88 : 64
+}
+
+func XTabHeight() -> CGFloat{
+    return UIDevice.current.isiPhoneXMore() ? (49 + 34) : 49
+}
+
+func XTopMargin() -> CGFloat{
+    return UIDevice.current.isiPhoneXMore() ? 24 : 0
+}
+
+func XBottomMargin() -> CGFloat{
+    return UIDevice.current.isiPhoneXMore() ? 34 : 0
+}
+
+
 extension CGFloat {
 
     static func deviceFit(_ number: CGFloat?) -> CGFloat {
@@ -80,4 +85,13 @@ extension CGFloat {
         return KScreen_Width / 375.0 * n
     }
 
+}
+extension UIDevice {
+    public func isiPhoneXMore() -> Bool {
+        var isMore:Bool = false
+        if #available(iOS 11.0, *) {
+            isMore = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0.0 > 0.0
+        }
+        return isMore
+    }
 }

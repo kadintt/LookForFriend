@@ -27,7 +27,6 @@
 		F043308E26F1E4E8000FDFF9 /* DCBaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043304526F1E4E7000FDFF9 /* DCBaseNavController.swift */; };
 		F043308F26F1E4E8000FDFF9 /* DCBaseFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043304626F1E4E7000FDFF9 /* DCBaseFormController.swift */; };
 		F043309026F1E4E8000FDFF9 /* DCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F043304726F1E4E7000FDFF9 /* DCViewController.m */; };
-		F043309126F1E4E8000FDFF9 /* DCAPPTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043304826F1E4E7000FDFF9 /* DCAPPTabBar.swift */; };
 		F043309326F1E4E8000FDFF9 /* DCConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043304B26F1E4E7000FDFF9 /* DCConstant.swift */; };
 		F043309426F1E4E8000FDFF9 /* DCMainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043304C26F1E4E7000FDFF9 /* DCMainTabController.swift */; };
 		F043309526F1E4E8000FDFF9 /* DCWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043304F26F1E4E8000FDFF9 /* DCWebViewController.swift */; };
@@ -117,6 +116,9 @@
 		F0434B5427186EED0070B3AF /* NearPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0434B5327186EED0070B3AF /* NearPeopleViewController.swift */; };
 		F0434B7A271BB0800070B3AF /* RecommendPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0434B79271BB0800070B3AF /* RecommendPeopleCell.swift */; };
 		F0805671271C2AFE00503BF5 /* NearPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0805670271C2AFE00503BF5 /* NearPeopleCell.swift */; };
+		F0BA9C732729972600ACF8F7 /* DynamicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA9C722729972600ACF8F7 /* DynamicCell.swift */; };
+		F0BA9C7727299E1B00ACF8F7 /* WaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA9C7627299E1B00ACF8F7 /* WaterfallLayout.swift */; };
+		F0BA9C7A2729A0A400ACF8F7 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA9C792729A0A400ACF8F7 /* MessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,7 +170,6 @@
 		F043304526F1E4E7000FDFF9 /* DCBaseNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCBaseNavController.swift; sourceTree = "<group>"; };
 		F043304626F1E4E7000FDFF9 /* DCBaseFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCBaseFormController.swift; sourceTree = "<group>"; };
 		F043304726F1E4E7000FDFF9 /* DCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCViewController.m; sourceTree = "<group>"; };
-		F043304826F1E4E7000FDFF9 /* DCAPPTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCAPPTabBar.swift; sourceTree = "<group>"; };
 		F043304926F1E4E7000FDFF9 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		F043304B26F1E4E7000FDFF9 /* DCConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCConstant.swift; sourceTree = "<group>"; };
 		F043304C26F1E4E7000FDFF9 /* DCMainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCMainTabController.swift; sourceTree = "<group>"; };
@@ -324,6 +325,9 @@
 		F0434B79271BB0800070B3AF /* RecommendPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPeopleCell.swift; sourceTree = "<group>"; };
 		F0805670271C2AFE00503BF5 /* NearPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearPeopleCell.swift; sourceTree = "<group>"; };
 		F0805672271C431000503BF5 /* APPDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPDefine.h; sourceTree = "<group>"; };
+		F0BA9C722729972600ACF8F7 /* DynamicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCell.swift; sourceTree = "<group>"; };
+		F0BA9C7627299E1B00ACF8F7 /* WaterfallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallLayout.swift; sourceTree = "<group>"; };
+		F0BA9C792729A0A400ACF8F7 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +379,7 @@
 		F037D97427157D3600423B61 /* 留言板 */ = {
 			isa = PBXGroup;
 			children = (
+				F0BA9C712729970D00ACF8F7 /* view */,
 				F037D97D27157E6300423B61 /* DynamicViewController.swift */,
 			);
 			path = "留言板";
@@ -383,6 +388,7 @@
 		F037D97527157D4100423B61 /* 消息 */ = {
 			isa = PBXGroup;
 			children = (
+				F0BA9C782729A08B00ACF8F7 /* view */,
 				F037D97927157DE000423B61 /* MessageViewController.swift */,
 			);
 			path = "消息";
@@ -485,7 +491,6 @@
 			children = (
 				F043304926F1E4E7000FDFF9 /* BaseTableViewController.h */,
 				F043304326F1E4E7000FDFF9 /* BaseTableViewController.m */,
-				F043304826F1E4E7000FDFF9 /* DCAPPTabBar.swift */,
 				F043304626F1E4E7000FDFF9 /* DCBaseFormController.swift */,
 				F043304526F1E4E7000FDFF9 /* DCBaseNavController.swift */,
 				F043304B26F1E4E7000FDFF9 /* DCConstant.swift */,
@@ -857,6 +862,23 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		F0BA9C712729970D00ACF8F7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F0BA9C722729972600ACF8F7 /* DynamicCell.swift */,
+				F0BA9C7627299E1B00ACF8F7 /* WaterfallLayout.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		F0BA9C782729A08B00ACF8F7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F0BA9C792729A0A400ACF8F7 /* MessageCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		F7922C1F3751978127F85400 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1062,7 +1084,6 @@
 				F043309826F1E4E8000FDFF9 /* RequestTool.swift in Sources */,
 				F043314426F1E51A000FDFF9 /* TZAssetModel.m in Sources */,
 				F04330B526F1E4E8000FDFF9 /* UITableViewCell+Category.m in Sources */,
-				F043309126F1E4E8000FDFF9 /* DCAPPTabBar.swift in Sources */,
 				F043309E26F1E4E8000FDFF9 /* DCStringExtension.swift in Sources */,
 				F043314126F1E51A000FDFF9 /* TZImageCropManager.m in Sources */,
 				F04330A026F1E4E8000FDFF9 /* UITableViewCellExtention.swift in Sources */,
@@ -1074,6 +1095,7 @@
 				F043314A26F1E51A000FDFF9 /* TZImageManager.m in Sources */,
 				F043309926F1E4E8000FDFF9 /* NetApi.swift in Sources */,
 				F04330A726F1E4E8000FDFF9 /* XLFormRowDescriptorExtention.swift in Sources */,
+				F0BA9C732729972600ACF8F7 /* DynamicCell.swift in Sources */,
 				F0434B7A271BB0800070B3AF /* RecommendPeopleCell.swift in Sources */,
 				F043315626F1E51A000FDFF9 /* PasswordKeyboard.m in Sources */,
 				F043313626F1E51A000FDFF9 /* SDPhotoBrowser.m in Sources */,
@@ -1091,6 +1113,7 @@
 				F043300726F1D9C6000FDFF9 /* AppDelegate.swift in Sources */,
 				F0434B5227186E880070B3AF /* RecommendController.swift in Sources */,
 				F04330A426F1E4E8000FDFF9 /* SwizzleProtocol.swift in Sources */,
+				F0BA9C7A2729A0A400ACF8F7 /* MessageCell.swift in Sources */,
 				F043309026F1E4E8000FDFF9 /* DCViewController.m in Sources */,
 				F043314726F1E51A000FDFF9 /* TZPhotoPreviewController.m in Sources */,
 				F043312B26F1E51A000FDFF9 /* MRIconView.m in Sources */,
@@ -1098,6 +1121,7 @@
 				F043309526F1E4E8000FDFF9 /* DCWebViewController.swift in Sources */,
 				F043314E26F1E51A000FDFF9 /* TZLocationManager.m in Sources */,
 				F043312E26F1E51A000FDFF9 /* BaseWebViewController.m in Sources */,
+				F0BA9C7727299E1B00ACF8F7 /* WaterfallLayout.swift in Sources */,
 				F043308A26F1E4E8000FDFF9 /* DYTExtension.swift in Sources */,
 				F04330AD26F1E4E8000FDFF9 /* UIImage+Extension.m in Sources */,
 				F043314526F1E51A000FDFF9 /* NSBundle+TZImagePicker.m in Sources */,

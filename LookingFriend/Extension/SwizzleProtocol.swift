@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: - 方法交换协议
-protocol SwizzleProtocol: class {
+protocol SwizzleProtocol: AnyObject {
     static func awake()
     static func swizzlingForClass(_ forClass: AnyClass, originalSelector: Selector, swizzledSelector: Selector)
 }

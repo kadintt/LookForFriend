@@ -11,10 +11,9 @@ import SnapKit
 class HomeViewController: DCViewController {
 
     var childVCs:[DCViewController] = []
-
     
     var pageMenu:SPPageMenu = {
-        let pageMenu = SPPageMenu(frame: CGRect(x: 5, y: KNav_Height + 28 - 40, width: KScreen_Width, height: 40), trackerStyle: .lineAttachment)
+        let pageMenu = SPPageMenu(frame: CGRect(x: 5, y: XTopMargin() + gScale(41), width: KScreen_Width, height: gScale(40)), trackerStyle: .lineAttachment)
         pageMenu.itemTitleFont = APPFont.regular(size: 14)
         pageMenu.selectedItemTitleFont = APPFont.medium(size: 14)
         pageMenu.selectedItemTitleColor = UIColor.dyt_title
@@ -33,12 +32,15 @@ class HomeViewController: DCViewController {
         return pageMenu
     }()
     
+    let sendBtn = UIButton.quickButton("发布", titleColor: .white, image: gImage("camera_icon"), selectImage: gImage("camera_icon"), font: APPFont.regular(size: 12), backgroundColor: .white, tag: 10272140, target: self, action: #selector(sendClick))
+    
+    
     var reVC = RecommendController()
     
     var nearVc = NearPeopleViewController()
     
     lazy var scrollView: UIScrollView = {
-        let s = UIScrollView(frame: CGRect(x: 0, y: pageMenu.bottom_sd + 18, width: KScreen_Width, height: view.height - pageMenu.bottom_sd - 18 - KTab_Height))
+        let s = UIScrollView(frame: CGRect(x: 0, y: pageMenu.bottom_sd, width: KScreen_Width, height: KScreen_Height - pageMenu.bottom_sd - XTabHeight()))
         s.contentSize = CGSize(width: 2*KScreen_Width, height: 0)
         s.isPagingEnabled = true
         s.showsVerticalScrollIndicator = false
@@ -54,7 +56,7 @@ class HomeViewController: DCViewController {
         } else {
             // Fallback on earlier versions
         }
-        
+    
         return s
     }()
     
@@ -64,8 +66,15 @@ class HomeViewController: DCViewController {
         view.backgroundColor = .white
         print("首页")
         view.addSubview(pageMenu)
+        view.addSubview(sendBtn)
         view.addSubview(scrollView)
         pageMenu.delegate = self
+   
+        sendBtn.sd.topSpace(view, XTopMargin() + gScale(41)).rightSpace(view, gScale(13.5)).heightIs(gScale(25)).widthIs(gScale(60))
+        sendBtn.setBackgroundImage(gImage("action_btn_back"), for: .normal)
+        sendBtn.setLayout(.ImageLeftTitleRightStyle, aSpacing: gScale(3.5))
+        
+        pageMenu.sd.centerYEqual(sendBtn).offset(-gScale(2))
         
         addChild(reVC)
         addChild(nearVc)
@@ -75,13 +84,16 @@ class HomeViewController: DCViewController {
 
         reVC.view.frame = CGRect(x: 0, y: 0, width: KScreen_Width, height: scrollView.height_sd)
         nearVc.view.frame = CGRect(x: KScreen_Width, y: 0, width: KScreen_Width, height: scrollView.height_sd)
+        
         scrollView.sd_addSubviews([reVC.view!, nearVc.view!])
         pageMenu.bridgeScrollView = scrollView
         self.isHiddenNavigationBar = true
         
     }
     
-
+    @objc func sendClick() {
+        DYTHUDTool.showWDToast("点击发布")
+    }
 }
 
 extension HomeViewController:SPPageMenuDelegate {

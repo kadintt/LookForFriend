@@ -131,6 +131,9 @@
         _tableView.backgroundColor = [UIColor colorWithHex:0xFAFAFA];
         _tableView.tableFooterView = [UIView new];
         _tableView.showsVerticalScrollIndicator = false;
+//        if (@available(iOS 15.0, *)) {
+//            _tableView.sectionHeaderTopPadding = 0;
+//        }
     }
     return _tableView;
 }
