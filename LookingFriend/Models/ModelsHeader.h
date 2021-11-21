@@ -9,5 +9,6 @@
 #define ModelsHeader_h
 
 #import "BaseModel.h"
+#import "ChooseTypeModel.h"
 
 #endif /* ModelsHeader_h */

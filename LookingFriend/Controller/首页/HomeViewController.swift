@@ -40,7 +40,7 @@ class HomeViewController: DCViewController {
     var nearVc = NearPeopleViewController()
     
     lazy var scrollView: UIScrollView = {
-        let s = UIScrollView(frame: CGRect(x: 0, y: pageMenu.bottom_sd, width: KScreen_Width, height: KScreen_Height - pageMenu.bottom_sd - XTabHeight()))
+        let s = UIScrollView(frame: CGRect(x: 0, y: XTopMargin() + gScale(41) + gScale(40), width: KScreen_Width, height: KScreen_Height - XTopMargin() - gScale(41) - gScale(40) - XTabHeight()))
         s.contentSize = CGSize(width: 2*KScreen_Width, height: 0)
         s.isPagingEnabled = true
         s.showsVerticalScrollIndicator = false
@@ -93,6 +93,7 @@ class HomeViewController: DCViewController {
     
     @objc func sendClick() {
         DYTHUDTool.showWDToast("点击发布")
+        push(vc: ChooseTypeController())
     }
 }
 

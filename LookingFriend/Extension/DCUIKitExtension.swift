@@ -8,6 +8,25 @@
 
 import Foundation
 
+extension UIView {
+    public func gradientLayer() {
+        let layer = CALayer()
+        layer.frame = self.bounds
+        layer.backgroundColor = UIColor(red: 0.29, green: 0.32, blue: 0.36, alpha: 1).cgColor
+        self.layer.addSublayer(layer)
+        // gradientCode
+        let gradient1 = CAGradientLayer()
+        gradient1.colors = [UIColor(red: 0.99, green: 0.13, blue: 0.26, alpha: 1).cgColor, UIColor(red: 1, green: 0.58, blue: 0.03, alpha: 1).cgColor]
+        gradient1.locations = [0, 1]
+        gradient1.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient1.endPoint = CGPoint(x: 1.0, y: 0.5)
+        gradient1.frame = self.bounds
+        self.layer.addSublayer(gradient1)
+        self.layer.cornerRadius = self.size.height/2;
+        
+    }
+}
+
 extension UILabel {
     /// 快速创建lab
     ///
@@ -72,6 +91,25 @@ extension UIButton {
         button.tag = tag
 
         return button
+    }
+    
+    public func addGradientLayer() {
+        let layer = CALayer()
+        layer.frame = self.bounds
+        layer.backgroundColor = UIColor(red: 0.29, green: 0.32, blue: 0.36, alpha: 1).cgColor
+        self.layer.addSublayer(layer)
+        // gradientCode
+        let gradient1 = CAGradientLayer()
+        gradient1.colors = [UIColor(red: 0.99, green: 0.13, blue: 0.26, alpha: 1).cgColor, UIColor(red: 1, green: 0.58, blue: 0.03, alpha: 1).cgColor]
+        gradient1.locations = [0, 1]
+        gradient1.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient1.endPoint = CGPoint(x: 1.0, y: 0.5)
+        gradient1.frame = self.bounds
+        self.layer.addSublayer(gradient1)
+        self.layer.cornerRadius = self.size.height/2;
+        if let lab = self.titleLabel {
+            self.bringSubviewToFront(lab)
+        }
     }
 }
 

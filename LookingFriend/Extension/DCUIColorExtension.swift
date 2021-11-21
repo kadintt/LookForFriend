@@ -29,8 +29,16 @@ extension UIColor {
 
     /// 新背景
     @objc static let dyt_new_background = UIColor(hexString: "f4f5f6")
-
+    /// #0D0E15
     @objc static let dyt_title = UIColor(hexString: "0D0E15")
+    /// #6D788E
+    @objc static let dyt_des = UIColor(hexString: "6D788E")
+    /// #9DA4B3
+    @objc static let dyt_time = UIColor(hexString: "9DA4B3")
+    /// #FE2042
+    @objc static let dyt_point = UIColor(hexString: "FE2042")
+
+    
     /// 正文 494847
     @objc static let dyt_text = UIColor(hexString: "494847")
     /// 描述 83817F

@@ -30,28 +30,21 @@ class DynamicViewController: DCViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.isHiddenNavigationBar = true
         view.backgroundColor = .white
-        
-
         addTopViews()
         configColView()
-
-        
-       
-        
-        
     }
     
     private func addTopViews() {
         view.sd_addSubviews([titleL,botV,sendBtn])
         let w = "留言板".sizeWithText(font: APPFont.medium(size: 22), CGSize(width: 100, height: gScale(22))).width
-        titleL.sd.leftSpace(view, gScale(16)).topSpace(view, gScale(44)).heightIs(22).widthIs(w)
+        titleL.sd.leftSpace(view, gScale(16)).topSpace(view, gScale(44) + XTopMargin()).heightIs(22).widthIs(w)
         botV.sd.centerXEqual(titleL).heightIs(gScale(4)).widthIs((10)).topSpace(titleL,10)
     
         sendBtn.sd.topSpace(view, XTopMargin() + gScale(41.5)).rightSpace(view, gScale(14)).heightIs(gScale(25)).widthIs(gScale(60))
         sendBtn.setBackgroundImage(gImage("action_btn_back"), for: .normal)
         sendBtn.setLayout(.ImageLeftTitleRightStyle, aSpacing: gScale(3.5))
+        self.isHiddenNavigationBar = true
     }
     
     private func configColView() {
@@ -64,10 +57,7 @@ class DynamicViewController: DCViewController {
         layout.headerHeight = { _ in return 0 }
         layout.footerHeight = { _ in return 0 }
         collectionView = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
-        
-        
-
-        
+    
         collectionView?.backgroundColor = .white
         collectionView?.contentInsetAdjustmentBehavior = .always
         collectionView?.dataSource = self
@@ -102,33 +92,5 @@ extension DynamicViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        let r = indexPath.item % 3
-//
-//        switch r {
-//
-//        case 0:
-//            return CGSize(width: itemWidth, height: gScale(182.5))
-//        case 1:
-//            return CGSize(width: itemWidth, height: gScale(150))
-//        case 2:
-//            return CGSize(width: itemWidth, height: gScale(135))
-//        default:
-//            return CGSize(width: itemWidth, height: gScale(182.5))
-//        }
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        gScale(10)
-//    }
-//
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        gScale(7)
-//    }
-//
 
-    
 }

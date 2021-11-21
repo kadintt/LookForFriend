@@ -7,7 +7,6 @@
 //
 
 #import "RefreshTool.h"
-#import <SDAutoLayout/SDAutoLayout.h>
 #import "RefreshToolDownPullHeader.h"
 
 #define DefaultPage 1
@@ -134,7 +133,7 @@
     }
     if (_scrollView.mj_footer) { //防止刚出来的时候footer显示
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            self->_scrollView.mj_footer.hidden = self->_scrollView.mj_contentH < self->_scrollView.height;
+            self->_scrollView.mj_footer.hidden = self->_scrollView.mj_contentH < self->_scrollView.frame.size.height;
 //            if (_tableView) {
 //
 //                _upPullFooter.hidden = !(_tableView.numberOfSections > 0 && [_tableView numberOfRowsInSection:0] > 5);
@@ -172,40 +171,4 @@
         _collectionView = (UICollectionView *) scrollView;
     }
 }
-
-//- (MJRefreshNormalHeader *)downPullHeader {
-//    if (!_downPullHeader) {
-//        __weak typeof(self) weakSelf = self;;
-//        _downPullHeader = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-//            if (weakSelf.isAutoPage) {
-//                weakSelf.page = 1;
-//            }
-//            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(refreshToolBeginDownRefreshWithScrollView:tool:)]) {
-//                [weakSelf.delegate refreshToolBeginDownRefreshWithScrollView:weakSelf.scrollView tool:weakSelf];
-//            }
-//        }];
-//        _downPullHeader.lastUpdatedTimeLabel.hidden = YES;
-//
-//    }
-//    return _downPullHeader;
-//}
-
-//- (MJRefreshAutoNormalFooter *)upPullFooter {
-//    if (!_upPullFooter) {
-//        __weak typeof(self) weakSelf = self;;
-//        _upPullFooter = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-//            if (weakSelf.isAutoPage) {
-//                weakSelf.page += 1;
-//            }
-//            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(refreshToolBeginUpRefreshWithScrollView:tool:)]) {
-//                [weakSelf.delegate refreshToolBeginUpRefreshWithScrollView:weakSelf.scrollView tool:weakSelf];
-//            }
-//        }];
-//        _upPullFooter.triggerAutomaticallyRefreshPercent = -1;
-//        [_upPullFooter setTitle:@"" forState:MJRefreshStateNoMoreData];
-//        _upPullFooter.hidden = YES;
-//    }
-//    return _upPullFooter;
-//}
-
 @end

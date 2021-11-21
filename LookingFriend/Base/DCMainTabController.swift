@@ -11,12 +11,12 @@ class DCMainTabController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setup()        
         let v = UIView(frame: CGRect(x: 0, y: 0, width: KScreen_Width, height: 0.5))
         v.backgroundColor = UIColor(hex: 0xEEEEF2)
         tabBar.addSubview(v)
-        
-        print(tabBar.subviews)
+        tabBar.backgroundColor = .white
     }
 
     private func setup() {

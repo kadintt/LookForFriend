@@ -116,9 +116,11 @@
 		F0434B5427186EED0070B3AF /* NearPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0434B5327186EED0070B3AF /* NearPeopleViewController.swift */; };
 		F0434B7A271BB0800070B3AF /* RecommendPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0434B79271BB0800070B3AF /* RecommendPeopleCell.swift */; };
 		F0805671271C2AFE00503BF5 /* NearPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0805670271C2AFE00503BF5 /* NearPeopleCell.swift */; };
+		F0ABF064273FEA320091D668 /* ChooseTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ABF063273FEA320091D668 /* ChooseTypeController.swift */; };
 		F0BA9C732729972600ACF8F7 /* DynamicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA9C722729972600ACF8F7 /* DynamicCell.swift */; };
 		F0BA9C7727299E1B00ACF8F7 /* WaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA9C7627299E1B00ACF8F7 /* WaterfallLayout.swift */; };
 		F0BA9C7A2729A0A400ACF8F7 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA9C792729A0A400ACF8F7 /* MessageCell.swift */; };
+		F0C60205273FEF9300EB7AA3 /* ChooseTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C60204273FEF9300EB7AA3 /* ChooseTypeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -325,9 +327,12 @@
 		F0434B79271BB0800070B3AF /* RecommendPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPeopleCell.swift; sourceTree = "<group>"; };
 		F0805670271C2AFE00503BF5 /* NearPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearPeopleCell.swift; sourceTree = "<group>"; };
 		F0805672271C431000503BF5 /* APPDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPDefine.h; sourceTree = "<group>"; };
+		F0ABF063273FEA320091D668 /* ChooseTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTypeController.swift; sourceTree = "<group>"; };
 		F0BA9C722729972600ACF8F7 /* DynamicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCell.swift; sourceTree = "<group>"; };
 		F0BA9C7627299E1B00ACF8F7 /* WaterfallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallLayout.swift; sourceTree = "<group>"; };
 		F0BA9C792729A0A400ACF8F7 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		F0C60203273FEF9300EB7AA3 /* ChooseTypeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseTypeModel.h; sourceTree = "<group>"; };
+		F0C60204273FEF9300EB7AA3 /* ChooseTypeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseTypeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -470,6 +475,7 @@
 		F043303B26F1E4E7000FDFF9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F0C60201273FEF7300EB7AA3 /* 登录 */,
 				F043303C26F1E4E7000FDFF9 /* ModelsHeader.h */,
 				F0805672271C431000503BF5 /* APPDefine.h */,
 				F043303D26F1E4E7000FDFF9 /* Base */,
@@ -537,6 +543,7 @@
 		F043305A26F1E4E8000FDFF9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F0ABF062273FE9ED0091D668 /* 登录 */,
 				F037D97327157D1C00423B61 /* 首页 */,
 				F037D97427157D3600423B61 /* 留言板 */,
 				F037D97527157D4100423B61 /* 消息 */,
@@ -862,6 +869,14 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		F0ABF062273FE9ED0091D668 /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				F0ABF063273FEA320091D668 /* ChooseTypeController.swift */,
+			);
+			path = "登录";
+			sourceTree = "<group>";
+		};
 		F0BA9C712729970D00ACF8F7 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -877,6 +892,15 @@
 				F0BA9C792729A0A400ACF8F7 /* MessageCell.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		F0C60201273FEF7300EB7AA3 /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				F0C60203273FEF9300EB7AA3 /* ChooseTypeModel.h */,
+				F0C60204273FEF9300EB7AA3 /* ChooseTypeModel.m */,
+			);
+			path = "登录";
 			sourceTree = "<group>";
 		};
 		F7922C1F3751978127F85400 /* Frameworks */ = {
@@ -1121,6 +1145,8 @@
 				F043309526F1E4E8000FDFF9 /* DCWebViewController.swift in Sources */,
 				F043314E26F1E51A000FDFF9 /* TZLocationManager.m in Sources */,
 				F043312E26F1E51A000FDFF9 /* BaseWebViewController.m in Sources */,
+				F0ABF064273FEA320091D668 /* ChooseTypeController.swift in Sources */,
+				F0C60205273FEF9300EB7AA3 /* ChooseTypeModel.m in Sources */,
 				F0BA9C7727299E1B00ACF8F7 /* WaterfallLayout.swift in Sources */,
 				F043308A26F1E4E8000FDFF9 /* DYTExtension.swift in Sources */,
 				F04330AD26F1E4E8000FDFF9 /* UIImage+Extension.m in Sources */,
